@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{C55840E0-3FA4-46DD-8851-81F99A3D2E24}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{D367FA5F-8607-4EC0-B1E9-84A138BA9590}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -461,7 +461,7 @@
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DECLARE @JSON_TABLE VARCHAR(MAX)
 
 SELECT @JSON_TABLE = BulkColumn
-FROM OPENROWSET (BULK 'C:\Projetos\Teste Técnico Quero\1 - Python\apidatafrompython.json', SINGLE_CLOB)T
+FROM OPENROWSET (BULK 'C:\Projetos\Teste Técnico Quero\\LocalidadesIBGE\1 - Python\apidatafrompython.json', SINGLE_CLOB)T
 SELECT 
 TableA.id as [ID da Localidade],
 TableA.nome as [Nome da Localidade],
@@ -952,14 +952,6 @@ CROSS APPLY OPENJSON(TableUF.regiao)
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL BOLADÃO\Origem OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\ETL BOLADÃO\Destino OLE DB">
     <Properties>
       <Property>
@@ -969,6 +961,14 @@ CROSS APPLY OPENJSON(TableUF.regiao)
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL BOLADÃO\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
