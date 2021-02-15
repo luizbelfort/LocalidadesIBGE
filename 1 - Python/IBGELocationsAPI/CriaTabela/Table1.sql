@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[TabelaDadosAPI]
+(
+	[Idlocalidade] NVARCHAR(10) NOT NULL PRIMARY KEY, 
+    [nomelocalidade] NVARCHAR(50) NULL, 
+    [idmunicipio] NVARCHAR(50) NULL, 
+    [nomemunicipio] NVARCHAR(50) NULL, 
+    [idmicroregiao] NVARCHAR(50) NULL, 
+    [nomemicroregiao] NVARCHAR(50) NULL, 
+    [idmesoregiao] NVARCHAR(50) NULL, 
+    [nomemesoregiao] NVARCHAR(50) NULL, 
+    [idufmesoregiao] NVARCHAR(10) NULL, 
+    [siglaufmesoregiao] NVARCHAR(10) NULL, 
+    [nomeufmesoregiao] NVARCHAR(50) NULL, 
+    [idregiaoUFmesoregiao] NVARCHAR(10) NULL, 
+    [siglaregiaoUFmesoregiao] NVARCHAR(10) NULL, 
+    [nomeregiaoUFmesoregiao] NVARCHAR(50) NULL, 
+    [idregiaoimediata] NVARCHAR(10) NULL, 
+    [nomeregiaoimediata] NVARCHAR(50) NULL, 
+    [idregiaointermediaria] NVARCHAR(10) NULL, 
+    [nomeregiaointermediaria] NVARCHAR(50) NULL, 
+    [idufregiaointermediaria] NVARCHAR(10) NULL, 
+    [siglaufregiaointermediaria] NVARCHAR(50) NULL, 
+    [nomeufregiaointermediaria] NVARCHAR(50) NULL, 
+    [idregiaoUFregiaointermediaria] NVARCHAR(10) NULL, 
+    [siglaregiaoUFregiaointermediaria] NVARCHAR(10) NULL, 
+    [nomeregiaoUFregiaointermediaria] NVARCHAR(50) NULL
+)

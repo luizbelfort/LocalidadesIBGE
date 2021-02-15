@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "IBGELocationsAPI", "IBGELocationsAPI\IBGELocationsAPI.pyproj", "{1808E34B-667D-4CD8-B990-E0A2EA5F37BA}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CriaTabela", "CriaTabela\CriaTabela.sqlproj", "{D920908B-8C14-416A-982C-A236AA3B184A}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ETLDadosAPI", "ETLDadosAPI\ETLDadosAPI.dtproj", "{63CC120F-EA7C-4F47-BFE6-B81082C62FB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1808E34B-667D-4CD8-B990-E0A2EA5F37BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1808E34B-667D-4CD8-B990-E0A2EA5F37BA}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{1808E34B-667D-4CD8-B990-E0A2EA5F37BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Development|Any CPU.Deploy.0 = Debug|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D920908B-8C14-416A-982C-A236AA3B184A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{63CC120F-EA7C-4F47-BFE6-B81082C62FB3}.Debug|Any CPU.ActiveCfg = Development
+		{63CC120F-EA7C-4F47-BFE6-B81082C62FB3}.Debug|Any CPU.Build.0 = Development
+		{63CC120F-EA7C-4F47-BFE6-B81082C62FB3}.Development|Any CPU.ActiveCfg = Development
+		{63CC120F-EA7C-4F47-BFE6-B81082C62FB3}.Development|Any CPU.Build.0 = Development
+		{63CC120F-EA7C-4F47-BFE6-B81082C62FB3}.Release|Any CPU.ActiveCfg = Development
+		{63CC120F-EA7C-4F47-BFE6-B81082C62FB3}.Release|Any CPU.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCA951B0-00CD-4BED-8582-FCA526F69B82}
+	EndGlobalSection
+EndGlobal

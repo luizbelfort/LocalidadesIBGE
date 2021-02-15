@@ -1,0 +1,9 @@
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\bin\Debug\CriaTabela.dacpac
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\bin\Debug\CriaTabela.dll
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\bin\Debug\CriaTabela.pdb
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\obj\Debug\CriaTabela.dll
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\obj\Debug\CriaTabela.pdb
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\obj\Debug\Model.xml
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\obj\Debug\refactor.xml
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\obj\Debug\postdeploy.sql
+C:\Projetos\Teste Técnico Quero\1 - Python\IBGELocationsAPI\CriaTabela\obj\Debug\predeploy.sql

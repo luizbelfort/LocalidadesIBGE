@@ -1,0 +1,976 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/13/2021 11:05:52 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-JFVODFM"
+  DTS:CreatorName="DESKTOP-JFVODFM\luizf"
+  DTS:DTSID="{E6A7AC49-DE91-4F3D-B521-444C1EAAD0DD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.152"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{C55840E0-3FA4-46DD-8851-81F99A3D2E24}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[csv file]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0C2E4E06-1406-40B1-9E25-B90316FDE562}"
+      DTS:ObjectName="csv file">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Projetos\Teste Técnico Quero\1 - Python\codebeautify.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{2B731EDE-333D-457F-B597-A13D3DD83F22}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nome"
+              DTS:DTSID="{1D044692-35D7-4B24-B43E-22E3A2B97467}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="municipio"
+              DTS:DTSID="{DC5D3397-C95E-4722-B3A6-FF23BFC08BAA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[csv2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7EBDE30C-CF12-445F-B10E-C610BAB0B558}"
+      DTS:ObjectName="csv2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Projetos\Teste Técnico Quero\1 - Python\codebeautify.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{F03EF4B4-8A07-4AED-9E52-4B1958CFBC2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nome"
+              DTS:DTSID="{F7C354CB-B7C7-4A27-B49B-C4A4081DC9A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="235"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="municipio"
+              DTS:DTSID="{F5E2DFF1-11CF-4B0C-8635-45F96DCF06E5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7F29CDB8-3E86-4A6E-B47B-0534CAF2B39A}"
+      DTS:ObjectName="DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-JFVODFM\SQLEXPRESS;Initial Catalog=DBLocaisIBGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{66B1429F-1CC4-4A45-A6F6-603C6EB33504}"
+      DTS:ObjectName="DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-JFVODFM\SQLEXPRESS;Initial Catalog=DBLocaisIBGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A622534C-18FB-4447-B2AD-9F1E43921A47}"
+      DTS:ObjectName="DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-JFVODFM\SQLEXPRESS;Initial Catalog=DBLocaisIBGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{41BE0500-F11B-4F20-BCCB-48A55983EA1D}"
+      DTS:ObjectName="DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-JFVODFM\SQLEXPRESS;Initial Catalog=DBLocaisIBGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ETL BOLADÃO"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{929AF234-6E27-4199-A8F7-DE7B1E08CED8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL BOLADÃO"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL BOLADÃO\Destino OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[TabelaDadosAPI]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL BOLADÃO\Destino OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 3]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ID da Localidade]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ID da Localidade"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Localidade]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Localidade]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Nome da Localidade]"
+                      cachedDataType="nText"
+                      cachedName="Nome da Localidade"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Localidade]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Localidade]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ID do Municipio]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ID do Municipio"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID do Municipio]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID do Municipio]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Nome do Municipio]"
+                      cachedDataType="nText"
+                      cachedName="Nome do Municipio"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome do Municipio]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome do Municipio]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ID da Microrregiao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ID da Microrregiao"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Microrregiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Microrregiao]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Nome da Microrregiao]"
+                      cachedDataType="nText"
+                      cachedName="Nome da Microrregiao"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Microrregiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Microrregiao]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ID da Mesorregiao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ID da Mesorregiao"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Mesorregiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Mesorregiao]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Nome da Mesorregiao]"
+                      cachedDataType="nText"
+                      cachedName="Nome da Mesorregiao"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Mesorregiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Mesorregiao]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ID da UF]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ID da UF"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da UF]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da UF]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Nome da UF]"
+                      cachedDataType="nText"
+                      cachedName="Nome da UF"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da UF]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da UF]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Sigla da UF]"
+                      cachedDataType="nText"
+                      cachedName="Sigla da UF"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Sigla da UF]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Sigla da UF]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ID da Regiao]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="ID da Regiao"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Regiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Regiao]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Sigla da Regiao]"
+                      cachedDataType="nText"
+                      cachedName="Sigla da Regiao"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Sigla da Regiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Sigla da Regiao]" />
+                    <inputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Nome da Regiao]"
+                      cachedDataType="nText"
+                      cachedName="Nome da Regiao"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Regiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Regiao]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Localidade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Localidade" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Localidade]"
+                      dataType="nText"
+                      name="Nome da Localidade" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID do Municipio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID do Municipio" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome do Municipio]"
+                      dataType="nText"
+                      name="Nome do Municipio" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Microrregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Microrregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Microrregiao]"
+                      dataType="nText"
+                      name="Nome da Microrregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Mesorregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Mesorregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Mesorregiao]"
+                      dataType="nText"
+                      name="Nome da Mesorregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da UF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da UF" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da UF]"
+                      dataType="nText"
+                      name="Nome da UF" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Sigla da UF]"
+                      dataType="nText"
+                      name="Sigla da UF" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID da Regiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Regiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Sigla da Regiao]"
+                      dataType="nText"
+                      name="Sigla da Regiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[Nome da Regiao]"
+                      dataType="nText"
+                      name="Nome da Regiao" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL BOLADÃO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL BOLADÃO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL BOLADÃO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL BOLADÃO\Origem OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Origem OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DECLARE @JSON_TABLE VARCHAR(MAX)
+
+SELECT @JSON_TABLE = BulkColumn
+FROM OPENROWSET (BULK 'C:\Projetos\Teste Técnico Quero\1 - Python\apidatafrompython.json', SINGLE_CLOB)T
+SELECT 
+TableA.id as [ID da Localidade],
+TableA.nome as [Nome da Localidade],
+Tablemunicipio.id as [ID do Municipio],
+Tablemunicipio.nome as [Nome do Municipio],
+
+Tablemicrorregiao.id as [ID da Microrregiao],
+Tablemicrorregiao.nome as [Nome da Microrregiao],
+
+Tablemesorregiao.id as [ID da Mesorregiao],
+Tablemesorregiao.nome as [Nome da Mesorregiao],
+
+TableUF.id as [ID da UF],
+TableUF.nome as [Nome da UF],
+TableUF.sigla as [Sigla da UF],
+
+Tableregiao.id as [ID da Regiao],
+Tableregiao.sigla as [Sigla da Regiao],
+Tableregiao.nome as [Nome da Regiao]
+
+FROM OPENJSON(@JSON_TABLE)
+	WITH(
+	id VARCHAR(20),
+	nome NVARCHAR(MAX),
+	municipio NVARCHAR(MAX) as JSON
+	
+	) AS TableA
+CROSS APPLY OPENJSON(TableA.municipio)
+	WITH(
+		id VARCHAR(20),
+		nome NVARCHAR(MAX),
+		microrregiao NVARCHAR(MAX) AS JSON
+		) AS Tablemunicipio
+CROSS APPLY OPENJSON(Tablemunicipio.microrregiao)
+	WITH(
+		id VARCHAR(20),
+		nome NVARCHAR(MAX),
+		mesorregiao NVARCHAR(MAX) AS JSON
+		) AS Tablemicrorregiao
+CROSS APPLY OPENJSON(Tablemicrorregiao.mesorregiao)
+	WITH(
+		id VARCHAR(20),
+		nome NVARCHAR(MAX),
+		UF NVARCHAR(MAX) AS JSON
+		) AS Tablemesorregiao
+CROSS APPLY OPENJSON(Tablemesorregiao.UF)
+	WITH(
+		id VARCHAR(20),
+		nome NVARCHAR(MAX),
+		sigla NVARCHAR(MAX),
+		regiao NVARCHAR(MAX) AS JSON
+		) AS TableUF
+CROSS APPLY OPENJSON(TableUF.regiao)
+	WITH(
+		id VARCHAR(20),
+		sigla NVARCHAR(MAX),
+		nome NVARCHAR(MAX)
+		) AS Tableregiao</property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL BOLADÃO\Origem OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-JFVODFM\SQLEXPRESS.DBLocaisIBGE 2]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Localidade]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Localidade]"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Localidade]"
+                      name="ID da Localidade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Localidade]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Localidade]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Localidade]"
+                      name="Nome da Localidade"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID do Municipio]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID do Municipio]"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID do Municipio]"
+                      name="ID do Municipio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome do Municipio]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome do Municipio]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome do Municipio]"
+                      name="Nome do Municipio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Microrregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Microrregiao]"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Microrregiao]"
+                      name="ID da Microrregiao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Microrregiao]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Microrregiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Microrregiao]"
+                      name="Nome da Microrregiao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Mesorregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Mesorregiao]"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Mesorregiao]"
+                      name="ID da Mesorregiao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Mesorregiao]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Mesorregiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Mesorregiao]"
+                      name="Nome da Mesorregiao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da UF]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da UF]"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da UF]"
+                      name="ID da UF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da UF]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da UF]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da UF]"
+                      name="Nome da UF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Sigla da UF]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Sigla da UF]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Sigla da UF]"
+                      name="Sigla da UF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Regiao]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Regiao]"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID da Regiao]"
+                      name="ID da Regiao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Sigla da Regiao]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Sigla da Regiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Sigla da Regiao]"
+                      name="Sigla da Regiao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Regiao]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Regiao]"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[Nome da Regiao]"
+                      name="Nome da Regiao"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Localidade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Localidade" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Localidade]"
+                      dataType="nText"
+                      name="Nome da Localidade" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID do Municipio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID do Municipio" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome do Municipio]"
+                      dataType="nText"
+                      name="Nome do Municipio" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Microrregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Microrregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Microrregiao]"
+                      dataType="nText"
+                      name="Nome da Microrregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Mesorregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Mesorregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Mesorregiao]"
+                      dataType="nText"
+                      name="Nome da Mesorregiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da UF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da UF" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da UF]"
+                      dataType="nText"
+                      name="Nome da UF" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Sigla da UF]"
+                      dataType="nText"
+                      name="Sigla da UF" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID da Regiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="ID da Regiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Sigla da Regiao]"
+                      dataType="nText"
+                      name="Sigla da Regiao" />
+                    <externalMetadataColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[Nome da Regiao]"
+                      dataType="nText"
+                      name="Nome da Regiao" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Localidade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Localidade]"
+                      name="ID da Localidade" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Localidade]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Localidade]"
+                      name="Nome da Localidade" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID do Municipio]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID do Municipio]"
+                      name="ID do Municipio" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome do Municipio]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome do Municipio]"
+                      name="Nome do Municipio" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Microrregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Microrregiao]"
+                      name="ID da Microrregiao" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Microrregiao]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Microrregiao]"
+                      name="Nome da Microrregiao" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Mesorregiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Mesorregiao]"
+                      name="ID da Mesorregiao" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Mesorregiao]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Mesorregiao]"
+                      name="Nome da Mesorregiao" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da UF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da UF]"
+                      name="ID da UF" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da UF]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da UF]"
+                      name="Nome da UF" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Sigla da UF]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Sigla da UF]"
+                      name="Sigla da UF" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Regiao]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID da Regiao]"
+                      name="ID da Regiao" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Sigla da Regiao]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Sigla da Regiao]"
+                      name="Sigla da Regiao" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Regiao]"
+                      dataType="nText"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[Nome da Regiao]"
+                      name="Nome da Regiao" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL BOLADÃO.Paths[Saída de Origem OLE DB]"
+              endId="Package\ETL BOLADÃO\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+              name="Saída de Origem OLE DB"
+              startId="Package\ETL BOLADÃO\Origem OLE DB.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\ETL BOLADÃO"
+          TopLeft="112,54.1666663976179" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL BOLADÃO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.5,42"
+          Id="Package\ETL BOLADÃO\Origem OLE DB"
+          TopLeft="145.5,66.6249996690701" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\ETL BOLADÃO\Destino OLE DB"
+          TopLeft="208.5,225.333332214091" />
+        <EdgeLayout
+          Id="Package\ETL BOLADÃO.Paths[Saída de Origem OLE DB]"
+          TopLeft="222.75,108.62499966907">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.75,116.708332545021"
+              Start="0,0"
+              End="63.75,109.208332545021">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.3541662725103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.3541662725103"
+                    Point2="0,58.3541662725103"
+                    Point3="4,58.3541662725103" />
+                  <mssgle:LineSegment
+                    End="59.75,58.3541662725103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.75,58.3541662725103"
+                    Point2="63.75,58.3541662725103"
+                    Point3="63.75,62.3541662725103" />
+                  <mssgle:LineSegment
+                    End="63.75,109.208332545021" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL BOLADÃO\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL BOLADÃO\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
